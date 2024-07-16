@@ -6,7 +6,7 @@ import StudentLogin from './student/LoginPage';
 import DeanLogin from './dean/LoginPage';
 import AdminLogin from './admin/LoginPage';
 import Appp from './Admindb/Appp' ;
-import  StudentInput from './admin/StudentInput' ;
+import StudentInput from './admin/StudentInput';
 
 const App = () => (
     <Routes>

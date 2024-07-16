@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Form, Input, Select, DatePicker, Row, Col } from 'antd';
 
 
-const App = () => {
+const StudentInput = () => {
   const [componentSize, setComponentSize] = useState('default');
 
   const onFormLayoutChange = ({ size }) => {
@@ -205,4 +205,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default StudentInput;

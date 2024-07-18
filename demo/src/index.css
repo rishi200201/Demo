@@ -130,10 +130,16 @@ body, html {
   padding: 8px 15px;
   border-radius: 5px;
   color: #fff;
+  button {
+    padding: 10px 40px;
+    color: #080808;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .card:first-child {
-  background-color: #2962ff;
+  background-color: #515664;
 }
 
 .card:nth-child(2) {
@@ -307,10 +313,9 @@ body, html {
 /*------------------------------------------------*/
 .ji{
   color: #130c04;
-  background: red;
-  border-top-style: solid;
   height: 100px;
   align-content: center;
   text-align: center;
   width: 430px;
 }
+

@@ -2,9 +2,14 @@ import React from 'react'
 import 
 {BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
   BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
- from 'react-icons/bs'
+ from 'react-icons/bs';
+ import {Link,useNavigate} from 'react-router-dom';
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
+    const navigate = useNavigate();
+const handleNavigate = ({route}) => {
+   navigate(route);
+}
   return (
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
         <div className='sidebar-title'>
@@ -15,25 +20,25 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
         </div>
 
         <ul className='sidebar-list'>
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <BsGrid1X2Fill className='icon'/> Dashboard
-                </a>
+            <li className='sidebar-list-item' >
+               {/* <Link to='/student/list'> */}
+                    <BsGrid1X2Fill className='icon'/> CREATE USER
+                {/* </Link> */}
             </li>
             
             <li className='sidebar-list-item'>
+            <Link to='/student/list'>
+                    <BsFillGrid3X3GapFill className='icon' onClick={() => handleNavigate('/student/list')}/> VIEW USER
+                    </Link>
+            </li>
+            <li className='sidebar-list-item'>
                 <a href="">
-                    <BsFillGrid3X3GapFill className='icon'/> Categories
+                    <BsMenuButtonWideFill className='icon'/> REPORT
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsMenuButtonWideFill className='icon'/> Reports
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <BsFillGearFill className='icon'/> Setting
+                    <BsFillGearFill className='icon'/> SETTING
                 </a>
             </li>
         </ul>

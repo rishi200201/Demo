@@ -8,7 +8,12 @@ const Home = () => {
   const handleClick = () => {
     navigate('/StudentInput');
   };
-
+const handleclickfaculty=()=>{
+  navigate('/NewUser');
+}
+const handleclickdean=()=>{
+  navigate('/NewUser');
+}
   const data = [
     { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },
     { name: 'Page B', uv: 3000, pv: 1398, amt: 2210 },
@@ -28,23 +33,23 @@ const Home = () => {
       <div className='main-cards'>
         <div className='card'>
           <div className='card-inner'>
-            <h3>DEAN</h3>
+          <button onClick={handleclickdean} ><h3>DEAN</h3></button>
             <BsPeopleFill className='card_icon' />
           </div>
         </div>
 
         <div className='card'>
           <div className='card-inner'>
-            <h3>FACULTY</h3>
+          <button onClick={handleclickfaculty} ><h3>FACULTY</h3></button> 
             <BsPeopleFill className='card_icon' />
           </div>
         </div>
 
         <div className='card'>
           <div className='card-inner'>
-            <h3>STUDENTS</h3>
+          <button onClick={handleClick} ><h3>STUDENT</h3></button>
             <BsPeopleFill className='card_icon' />
-            <button onClick={handleClick}>Go to Student Input</button>
+            
           </div>
         </div>
 

@@ -21,9 +21,7 @@ const handleNavigate = ({route}) => {
 
         <ul className='sidebar-list'>
             <li className='sidebar-list-item' >
-               {/* <Link to='/student/list'> */}
                     <BsGrid1X2Fill className='icon'/> CREATE USER
-                {/* </Link> */}
             </li>
             
             <li className='sidebar-list-item'>
@@ -32,9 +30,9 @@ const handleNavigate = ({route}) => {
                     </Link>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
-                    <BsMenuButtonWideFill className='icon'/> REPORT
-                </a>
+            <Link to='/bulk'>
+                    <BsMenuButtonWideFill className='icon' onClick={() => handleNavigate('/Bulk')}/> BULK UPLOAD
+                </Link>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">

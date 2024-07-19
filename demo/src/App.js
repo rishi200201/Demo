@@ -9,6 +9,8 @@ import Appp from './Admindb/Appp' ;
 import StudentInput from './admin/StudentInput';
 import NewUser from './admin/NewUser';
 import { UserList } from './components/UserList';
+import Bulk from './components/csv/Bulk';
+
 
 const App = () => (
     <Routes>
@@ -22,6 +24,7 @@ const App = () => (
       <Route path="/StudentInput" element={<StudentInput />} />
       <Route path="/NewUser" element={<NewUser />} />
       <Route path='/student/list' element={<UserList />} />
+      <Route path='/bulk' element={<Bulk />} />
     </Routes>
 );
 
